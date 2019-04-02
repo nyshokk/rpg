@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>RPG</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="hotKeys"></div>
+
+<div class="scores"></div>
+
+
+<!--<div class="start">-->
+    <!--<div class="start_game" onclick="startGame()">-->
+        <!--Start game-->
+    <!--</div>-->
+<!--</div>-->
+
+<div class="poly">
+
+    <div class="sun"></div>
+    <div class="fog"></div>
+    <div class="foot">
+
+    </div>
+</div>
+<script src="static/game.js"></script>
+<script>
+    document.ondragstart = noselect;
+    document.onselectstart = noselect;
+    document.oncontextmenu = noselect;
+    function noselect() {return false;}
+</script>
+</body>
+</html>

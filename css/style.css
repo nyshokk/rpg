@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.start{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.51);
+    position: absolute;
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start_game{
+    border: 4px solid darkgray;
+    text-align: center;
+    font-weight: bold;
+    width: 70px;
+    font-size: 30px;
+    padding: 20px;
+    cursor: pointer;
+    background: #e7e7e7;
+}
+
+.scores{
+    font-weight: bold;
+    color: #ac00ff;
+    padding: 10px;
+    text-align: center;
+    font-size: 50px;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    height: 50px
+}
+
+.hotKeys{
+    font-size: 50px;
+    position: absolute;
+}
+
+.airStrike{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 500px;
+    height: 500px;
+}
+
+.rocket{
+    position: absolute;
+    transform: rotate(90deg);
+    background: url("rocket.png");
+    background-size: contain;
+    width: 100px;
+    height: 36px;
+}
+
+.ball {
+    z-index: 1;
+    background: url("arrow.png");
+    /*background: #000;*/
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 120px;
+    bottom: 243px;
+}
+
+body {
+    background: url("skyback.png");
+    cursor: url(sword.png), default;
+}
+
+.weapon{
+    top: -15px;
+    left: -48px;
+    transform: rotateZ(53deg);
+    position: relative;
+    background: url("bow.png");
+    width: 128px;
+    height: 128px;
+}
+
+.sun {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    background: url("sun.png");
+    width: 70px;
+    height: 70px;
+}
+
+.butt {
+    background: rgba(255, 83, 247, 0.66);
+    border: 2px solid darkorchid;
+    font-family: "Book Antiqua";
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+    color: #000000;
+    padding: 10px;
+    width: 150px;
+}
+
+.player {
+    position: absolute;
+    left: 100px;
+    display: flex;
+    flex-direction: column;
+    transform: rotateY(180deg);
+    bottom: 128px;
+}
+
+.stats {
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    transform: rotateY(180deg);
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    left: -20px;
+    top: -40px;
+    width: 100px;
+    height: 32px;
+}
+
+.health {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+    background: rgba(255, 0, 0, 0.8);
+    width: 50px;
+    height: 15px;
+}
+
+.mana {
+
+    border-top: 1px solid rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 255, 0.8);
+    width: 50px;
+    height: 15px;
+}
+
+.player_head {
+    background: url("player/male_head.png");
+    width: 64px;
+    height: 64px;
+}
+
+.player_body {
+    background: url("player/male_body.png");
+    margin-left: 10px;
+    width: 44px;
+    height: 59px;
+}
+
+.player_arm {
+    transform-origin: top;
+    position: absolute;
+    top: 64px;
+    left: 20px;
+    background: url("player/male_arm.png");
+    width: 28px;
+    height: 66px;
+}
+
+.player_leg {
+    background: url("player/male_leg.png");
+    margin-left: 15px;
+    width: 28px;
+    height: 56px;
+}
+
+.monster {
+    position: absolute;
+    /*right: 100px;*/
+    display: flex;
+    flex-direction: column;
+    bottom: 128px;
+}
+
+.monster_head {
+    z-index: 2;
+    background: url("monsters/skeleton/skeleton_head.png");
+    width: 64px;
+    height: 64px;
+}
+
+.monster_body {
+    z-index: 2;
+    background: url("monsters/skeleton/skeleton_body.png");
+    margin-left: 10px;
+    width: 44px;
+    height: 59px;
+}
+
+.monster_arm {
+    z-index: 3;
+    transform-origin: top;
+    /*animation: zombie_arm 2s infinite ease-in-out;*/
+    position: absolute;
+    top: 64px;
+    left: 20px;
+    background: url("monsters/skeleton/skeleton_arm.png");
+    width: 28px;
+    height: 66px;
+}
+.monster_second_arm{
+    transform-origin: top;
+    z-index: 1;
+    /*animation: zombie_arm 2s infinite reverse;*/
+    position: absolute;
+    top: 64px;
+    left: 20px;
+    background: url("monsters/skeleton/skeleton_arm.png");
+    width: 28px;
+    height: 66px;
+}
+
+.monster_leg {
+    z-index: 1;
+    /*animation: legs 1s infinite reverse;*/
+    transform-origin: top;
+    background: url("monsters/skeleton/skeleton_leg.png");
+    margin-left: 15px;
+    width: 28px;
+    height: 56px;
+}
+.monster_second_leg {
+    /*z-index: -1;*/
+    position: absolute;
+    bottom: 0;
+    /*animation: legs 1s infinite ease-in-out;*/
+    transform-origin: top;
+    background: url("monsters/skeleton/skeleton_leg.png");
+    margin-left: 15px;
+    width: 28px;
+    height: 56px;
+}
+
+
+.poly {
+    width: 100vw;
+    height: 100vh;
+}
+
+.fog {
+    position: absolute;
+    z-index: -999;
+    bottom: 128px;
+    background: url("sky.png");
+    background-size: 400px;
+    width: 100vw;
+    height: 400px;
+}
+
+.foot {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 128px;
+    /*background: #000;*/
+    background: url("foot.png") repeat-x;
+    background-size: 128px;
+}
+
+/*Анимация руки*/
+@keyframes  zombie_arm{
+    from{
+        transform: rotateZ(0deg);
+    }
+
+    50%{
+        transform: rotateZ(110deg);
+    }
+
+    to{
+        transform: rotateZ(0deg);
+    }
+}
+
+/*Анимация ног*/
+@keyframes  legs{
+    from{
+        transform: rotateZ(0deg);
+    }
+
+    30%{
+        transform: rotateZ(25deg);
+    }
+
+
+    60%{
+        transform: rotateZ(-15deg);
+    }
+
+    to{
+        transform: rotateZ(0deg);
+    }
+}
+
+/*Анимация взрыва*/
+@keyframes boom {
+    to{
+        transform: scale(2);
+    }
+}
